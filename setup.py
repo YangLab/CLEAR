@@ -26,7 +26,7 @@ setup(name='CLEAR',
       ],
       entry_points={
           'console_scripts': [
-              'fast_quant=scr.run:main',
+              'clear_quant=scr.run:main',
               'circ_quant=scr.circ_quant:main',
           ],
       },
