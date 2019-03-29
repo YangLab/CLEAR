@@ -1,5 +1,5 @@
 # CLEAR
-A computational pipeline for circular and linear RNA expression analysis from ribosomal-RNA depleted (ribo–) RNA-seq (CLEAR
+A computational pipeline for circular and linear RNA expression analysis from ribosomal-RNA depleted (ribo–) RNA-seq (CLEAR)
 
 ## Schema
 ![pipeline](/docs/pipeline.png)
@@ -106,6 +106,4 @@ circ_quant.py -c CIRCexplorer2_output.txt -b hisat_aligned.bam -t -r annotation.
 
 
 ## License
-Copyright (C) 2019 YangLab.
-Licensed GPLv3 for open source use
-or contact YangLab for commercial use
+Copyright (C) 2019 YangLab. Licensed GPLv3 for open source use or contact YangLab (yanglab@@picb.ac.cn) for commercial use.
