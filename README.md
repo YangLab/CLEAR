@@ -2,7 +2,7 @@
 A computational pipeline for circular and linear RNA expression analysis from ribosomal-RNA depleted (ribo–) RNA-seq (CLEAR
 
 ## Schema
-![pipeline](https://github.com/YangLab/CSI/blob/master/schema.png)
+![pipeline](/docs/pipeline.png)
 
 ## Installation requirements
 * Package (python 2.7 +)
@@ -12,6 +12,7 @@ A computational pipeline for circular and linear RNA expression analysis from ri
 ## Installation
 ```bash
 git clone https://github.com/YangLab/CLEAR
+cd CLEAR
 python ./setup.py install
 ```
 
@@ -63,8 +64,13 @@ optional arguments:
 ```
 
 ### Example
+Start from fastq file:
 ```bash
 clear_quant -1 mate_1.fastq -2 mate_2.fastq -g hg38.fa -i hg38.hisat_index -j hg38.bowtie_index -G annotation.gtf -o output_dir
+```
+Start from fastq file:
+```bash
+circ_quant.py -c CIRCexplorer2_output.txt -b hisat_aligned.bam -t -r annotation.refFlat -o quant.txt
 ```
 
 ### Output
@@ -96,10 +102,10 @@ clear_quant -1 mate_1.fastq -2 mate_2.fastq -g hg38.fa -i hg38.hisat_index -j hg
 
 
 ## Citation
-**Dong R\*, Ma XK\*, Chen LL# and Yang L#. Increased complexity of circRNA expression during species evolution. RNA Biol, 2016 (Accepted)**
+**Ma XK\*, Liu CX, Wang MR, Dong R, Chen LL# and Yang L#. A CLEAR pipeline to directly compare circular and linear RNA expression. 2019 (Submitted)**
 
 
 ## License
 Copyright (C) 2019 YangLab.
-See the [LICENSE](https://github.com/YangLab/CSI/blob/master/LICENSE)
-file for license rights and limitations (MIT).
+Licensed GPLv3 for open source use
+or contact YangLab for commercial use
