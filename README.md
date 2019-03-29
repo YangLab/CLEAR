@@ -1,5 +1,5 @@
 # CLEAR
-A computational pipeline for circular and linear RNA expression analysis from ribosomal-RNA depleted (ribo–) RNA-seq (CLEAR)
+A computational pipeline for Circular and Linear RNA Expression Analysis from Ribosomal-RNA depleted (Ribo–) RNA-seq (CLEAR)
 
 ## Schema
 ![pipeline](/docs/pipeline.png)
