@@ -1,5 +1,5 @@
 # CLEAR
-A computational pipeline for Circular and Linear RNA Expression Analysis from Ribosomal-RNA depleted (Ribo–) RNA-seq (CLEAR)
+A computational pipeline for **C**ircular and **L**inear RNA **E**xpression **A**nalysis from **R**ibosomal-RNA depleted (**R**ibo–) RNA-seq (CLEAR)
 
 ## Schema
 ![pipeline](/docs/pipeline.png)
@@ -23,7 +23,7 @@ usage: clear_quant [-h] -1 M1 [-2 M2] -g GENOME -i HISAT -j BOWTIE1 -G GTF
               [-o OUTPUT] [-p THREAD]
 
 optional arguments:
-  -h, --help            show this help message and exit
+  -h, --help            Show this help message and exit.
   -1 M1                 Comma-separated list of read sequence files in FASTQ
                         format. When running with pair-end read, this should
                         contain #1 mates.
@@ -31,14 +31,14 @@ optional arguments:
                         format. -2 is only used when running with pair-end
                         read. This should contain #2 mates.
   -g GENOME, --genome GENOME
-                        Genome FASTA file
+                        Genome FASTA file.
   -i HISAT, --hisat HISAT
-                        Index files for HISAT2
+                        Index files for HISAT2.
   -j BOWTIE1, --bowtie1 BOWTIE1
-                        Index files for TopHat-Fusion
+                        Index files for TopHat-Fusion.
   -G GTF, --gtf GTF     Annotation GTF file.
   -o OUTPUT, --output OUTPUT
-                        The output directory
+                        The output directory.
   -p THREAD, --thread THREAD
                         Running threads. [default: 5]
 ```
@@ -48,19 +48,19 @@ usage: circ_quant [-h] -c CIRC -b BAM -r REF [--threshold THRESHOLD]
                      [--ratio RATIO] [-l] [-t] [-o OUTPUT]
 
 optional arguments:
-  -h, --help            show this help message and exit
-  -c CIRC, --circ CIRC  input circular RNA file
-  -b BAM, --bam BAM     to get mapped reads
-  -r REF, --ref REF     refFlat format gene annotation file.
+  -h, --help            Show this help message and exit.
+  -c CIRC, --circ CIRC  Input circular RNA file from CIRCexplorer2.
+  -b BAM, --bam BAM     Input mapped reads from HISAT2 in BAM format.
+  -r REF, --ref REF     The refFlat format gene annotation file.
   --threshold THRESHOLD
-                        threshold of HPB for choose circRNAs to filter linear
-                        sp.[default: 1]
-  --ratio RATIO         the ratio is used for adjust comparison between circ
-                        and linear.[default: 93.0/85]
-  -l, --length          Wether to consider all reads' length? [default: False]
+                        Threshold of FPB for choose circRNAs to filter linear
+                        SJ.[default: 1]
+  --ratio RATIO         The ratio is used for adjust comparison between circ
+                        and linear.[default: 1]
+  -l, --length          Whether to consider all reads' length? [default: False]
   -t, --tmp             Keep tmp dir? [default: False]
   -o OUTPUT, --output OUTPUT
-                        output file. [default: circRNA_quant.txt]
+                        Output file. [default: circRNA_quant.txt]
 ```
 
 ### Example
@@ -68,7 +68,7 @@ Start from fastq file:
 ```bash
 clear_quant -1 mate_1.fastq -2 mate_2.fastq -g hg38.fa -i hg38.hisat_index -j hg38.bowtie_index -G annotation.gtf -o output_dir
 ```
-Start from fastq file:
+Start from CIRCexplorer2 output file:
 ```bash
 circ_quant.py -c CIRCexplorer2_output.txt -b hisat_aligned.bam -t -r annotation.refFlat -o quant.txt
 ```
