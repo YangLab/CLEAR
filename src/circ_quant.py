@@ -259,24 +259,24 @@ def main():
 
     parser.add_argument('-c', '--circ', dest='circ',
                         required=True,
-                        help='input circular RNA file')
+                        help='Input circular RNA file from CIRCexplorer2.')
     parser.add_argument('-b', '--bam', dest='bam',
                         required=True,
-                        help='to get mapped reads')
+                        help='Input mapped reads from HISAT2 in BAM format.')
     # for get max
     # parser.add_argument('-S', '--sl', dest='sl',
                         # required=True,
                         # help='stringTie mapping file')
     parser.add_argument('-r', '--ref', dest='ref',
                         required=True,
-                        help='refFlat format gene annotation file.')
+                        help='The refFlat format gene annotation file.')
     parser.add_argument('--threshold', dest='threshold',
                         default=1, type=float,
-                        help='threshold of HPB for choose circRNAs to \
-                        filter linear sp.[default: 1]')
+                        help='Threshold of HPB for choosing circRNAs to \
+                        filter linear SJ.[default: 1]')
     parser.add_argument('--ratio', dest='ratio',
                         default=1, type=float,
-                        help='the ratio is used for adjust comparison between \
+                        help='The ratio is used for adjusting comparison between \
                         circ and linear.[default: 93.0/85]')
 
     parser.add_argument('-l', '--length', dest='length',
@@ -293,7 +293,7 @@ def main():
 
     parser.add_argument('-o', '--output', dest='output',
                         default='circRNA_quant.txt',
-                        help='output file. [default: circRNA_quant.txt]')
+                        help='Output file. [default: circRNA_quant.txt]')
 
     args = parser.parse_args()
     print '###Parameters:'
