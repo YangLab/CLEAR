@@ -70,7 +70,7 @@ clear_quant -1 mate_1.fastq -2 mate_2.fastq -g hg38.fa -i hg38.hisat_index -j hg
 ```
 Start from CIRCexplorer2 output file:
 ```bash
-circ_quant.py -c CIRCexplorer2_output.txt -b hisat_aligned.bam -t -r annotation.refFlat -o quant.txt
+circ_quant -c CIRCexplorer2_output.txt -b hisat_aligned.bam -t -r annotation.refFlat -o quant.txt
 ```
 
 ### Output
