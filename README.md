@@ -102,7 +102,7 @@ circ_quant -c CIRCexplorer2_output.txt -b hisat_aligned.bam -t -r annotation.ref
 
 
 ## Citation
-**Ma XK\*, Wang MR, Liu CX, Dong R, Carmichael GG, Chen LL and Yang L#. A CLEAR pipeline for direct comparison of circular and linear RNA expression. 2019, doi: 10.1101/668657**
+**Ma XK\*, Wang MR, Liu CX, Dong R, Carmichael GG, Chen LL and Yang L#. A CLEAR pipeline for direct comparison of circular and linear RNA expression. 2019, bioRxiv doi: 10.1101/668657**
 
 
 ## License

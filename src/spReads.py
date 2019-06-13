@@ -237,7 +237,6 @@ def main():
     p_annotate.set_defaults(func=annotate)
 
     args = parser.parse_args()
-    print '###Parameters:'
     print(args)
     args.func(args)
 

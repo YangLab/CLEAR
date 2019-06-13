@@ -296,9 +296,9 @@ def main():
                         help='Output file. [default: circRNA_quant.txt]')
 
     args = parser.parse_args()
-    print '###Parameters:'
+    print('###Parameters:')
     print(args)
-    print '###Parameters'
+    print('###Parameters')
 
     o_prefix = os.path.dirname(args.output)
     if o_prefix == '':
