@@ -5,6 +5,10 @@ A computational pipeline for **C**ircular and **L**inear RNA **E**xpression **A*
 ![pipeline](/docs/pipeline.png)
 
 ## Installation requirements
+* Software
+    - [CIRCexplorer2](https://github.com/YangLab/CIRCexplorer2/tree/master/circ2) (>=2.3.6)
+    - [HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml) (>=2.0.5)
+    - [StringTie](https://ccb.jhu.edu/software/stringtie) (>1.3.6)
 * Package (python 2.7 +)
     - [pysam](http://pysam.readthedocs.org/en/latest/) (>=0.8.4)
     - [pybedtools](http://daler.github.io/pybedtools/)
