@@ -77,6 +77,8 @@ Start from CIRCexplorer2 output file:
 circ_quant -c CIRCexplorer2_output.txt -b hisat_aligned.bam -t -r annotation.refFlat -o quant.txt
 ```
 
+*hisat_aligned.bam should not contain unmapped reads.*
+
 ### Output
 * output_dir/quant/quant.txt
 
