@@ -1,5 +1,5 @@
 # CLEAR/CIRCexplorer3
-A computational pipeline for **C**ircular and **L**inear RNA **E**xpression **A**nalysis from **R**ibosomal-RNA depleted (**R**ibo–) RNA-seq (CLEAR/CIRCexplorer 3)
+A computational pipeline for **C**ircular and **L**inear RNA **E**xpression **A**nalysis from **R**ibosomal-RNA depleted (**R**ibo–) RNA-seq (CLEAR/CIRCexplorer3)
 
 ## Schema
 ![pipeline](/docs/pipeline.png)
