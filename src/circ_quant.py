@@ -16,7 +16,7 @@ import subprocess
 import sys
 
 import pybedtools
-import spReads
+from . import spReads
 
 #######################################################################
 # Classes
