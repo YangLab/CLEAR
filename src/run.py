@@ -8,7 +8,7 @@ import sys
 
 import pysam
 
-import circ_quant
+from . import circ_quant
 
 def which(program):
     '''
