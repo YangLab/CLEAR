@@ -14,9 +14,10 @@ import shutil
 from collections import defaultdict
 import subprocess
 import sys
+sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
 
 import pybedtools
-from . import spReads
+import spReads
 
 #######################################################################
 # Classes

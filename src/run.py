@@ -5,10 +5,11 @@ import argparse
 import subprocess
 import os
 import sys
+sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
 
 import pysam
 
-from . import circ_quant
+import circ_quant
 
 def which(program):
     '''
@@ -168,9 +169,15 @@ def circ_annot(bam, genome_fa, gtf, circ_dir):
 
     gtf_cmd = ['gtfToGenePred',
                '-genePredExt',
+               '-allErrors',
                gtf,
                '{}/genePred.tmp'.format(circ_dir)]
-    subprocess.check_output(gtf_cmd)
+    try:
+	from subprocess import DEVNULL # py3k
+    except ImportError:
+	DEVNULL = open(os.devnull, 'wb')
+    subprocess.call(gtf_cmd, stdout=DEVNULL, stderr=subprocess.STDOUT)
+
     with open('{}/genePred.tmp'.format(circ_dir), 'r') as inf,\
             open('{}/annotation.txt'.format(circ_dir), 'w') as out:
         for line in inf:
