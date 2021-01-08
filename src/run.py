@@ -173,9 +173,9 @@ def circ_annot(bam, genome_fa, gtf, circ_dir):
                gtf,
                '{}/genePred.tmp'.format(circ_dir)]
     try:
-	from subprocess import DEVNULL # py3k
+        from subprocess import DEVNULL # py3k
     except ImportError:
-	DEVNULL = open(os.devnull, 'wb')
+        DEVNULL = open(os.devnull, 'wb')
     subprocess.call(gtf_cmd, stdout=DEVNULL, stderr=subprocess.STDOUT)
 
     with open('{}/genePred.tmp'.format(circ_dir), 'r') as inf,\
